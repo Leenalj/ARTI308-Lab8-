@@ -1,35 +1,64 @@
-KNN Project
-Overview
+📊 Advertising Click-Through Rate Prediction
 
-This project applies the K-Nearest Neighbors (KNN) algorithm for classification using Python and Scikit-learn.
+📌 Overview
+This project aims to predict whether a user will click on an advertisement based on behavioral and demographic features. A Logistic Regression model was used to classify user interactions and achieve high prediction accuracy.
 
-Dataset
+📂 Dataset
+The dataset contains the following features:
 
-KNN_Project_Data.csv
-The dataset contains numerical features and a target column called TARGET CLASS.
+Daily Time Spent on Site – Time spent on the website (minutes)
+Age – User age (years)
+Area Income – Average income of the user’s region
+Daily Internet Usage – Daily internet usage (minutes)
+Ad Topic Line – Advertisement headline
+City – User’s city
+Male – Gender indicator (1 = Male, 0 = Female)
+Country – User’s country
+Timestamp – Interaction time
+Clicked on Ad – Target variable (1 = Clicked, 0 = Not Clicked)
 
-Steps
-Load the dataset using pandas
-Perform basic data exploration (EDA)
-Standardize the features using StandardScaler
-Split the data into training and testing sets
-Train the KNN model
-Evaluate the model using confusion matrix and classification report
-Test different K values to find the best one
-Results
+🔍 Exploratory Data Analysis (EDA)
+Data visualization was used to explore patterns and relationships:
 
-K = 1 → Accuracy ≈ 72%
-K = 30 → Accuracy ≈ 83%
+Distribution of Age using histograms
+Relationship between Age and Area Income using joint plots
+Correlation between Daily Time Spent on Site and Daily Internet Usage
+Pair plots based on Clicked on Ad to compare user behavior
 
-Technologies
+⚙️ Data Preparation
+Selected relevant numerical features:
 
+Age
+Area Income
+Daily Time Spent on Site
+Daily Internet Usage
+
+Split dataset into:
+Training set (67%)
+Testing set (33%)
+
+🤖 Model
+Algorithm: Logistic Regression
+Library: Scikit-Learn
+
+Adjusted parameter:
+Increased max_iter to ensure model convergence
+
+📈 Performance
+The model achieved strong results:
+
+Accuracy: 97%
+Precision: 0.98
+Recall: 0.96
+F1-Score: 0.97
+
+🛠️ Technologies Used
 Python
 Pandas
 NumPy
 Matplotlib
 Seaborn
-Scikit-learn
+Scikit-Learn
 
-Conclusion
-
-The model performance improved after choosing the optimal K value. Feature scaling and selecting the right K are important for KNN.
+✅ Conclusion
+The Logistic Regression model achieved high accuracy in predicting ad clicks. The selected features effectively captured user behavior, resulting in strong and balanced performance metrics.
