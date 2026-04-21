@@ -1,37 +1,35 @@
-🧠 K-Nearest Neighbors (KNN) Project
+KNN Project
+Overview
 
-A simple machine learning project applying KNN for classification using Python and Scikit-learn.
+This project applies the K-Nearest Neighbors (KNN) algorithm for classification using Python and Scikit-learn.
 
-📊 Dataset
+Dataset
+
 KNN_Project_Data.csv
-Numerical features + target column (TARGET CLASS)
-⚙️ Workflow
+The dataset contains numerical features and a target column called TARGET CLASS.
 
-✔ Data Loading & Exploration (EDA)
-✔ Feature Scaling (StandardScaler)
-✔ Train/Test Split
-✔ Model Training (KNN)
-✔ Evaluation (Confusion Matrix & Classification Report)
-✔ K Optimization (Error Rate vs K)
+Steps
+Load the dataset using pandas
+Perform basic data exploration (EDA)
+Standardize the features using StandardScaler
+Split the data into training and testing sets
+Train the KNN model
+Evaluate the model using confusion matrix and classification report
+Test different K values to find the best one
+Results
 
-📈 Results
-K Value	Accuracy
-1	~72%
-30	~83%
+K = 1 → Accuracy ≈ 72%
+K = 30 → Accuracy ≈ 83%
 
-✅ Model performance improved after tuning K
+Technologies
 
-🛠️ Tech Stack
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-learn
 
-Python Pandas NumPy Matplotlib Seaborn Scikit-learn
+Conclusion
 
-🚀 How to Run
-pip install pandas numpy matplotlib seaborn scikit-learn
-jupyter notebook
-💡 Key Insights
-Scaling is essential for KNN
-Small K → overfitting
-Optimal K improves accuracy
-📌 Conclusion
-
-KNN is simple yet effective. Proper preprocessing and choosing the right K value significantly enhance performance.
+The model performance improved after choosing the optimal K value. Feature scaling and selecting the right K are important for KNN.
