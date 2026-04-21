@@ -1,56 +1,47 @@
-📊 Advertising Click-Through Rate Prediction
+📊 K-Nearest Neighbors (KNN) Classification
 
 📌 Overview
-This project aims to predict whether a user will click on an advertisement based on behavioral and demographic features. A Logistic Regression model was used to classify user interactions and achieve high prediction accuracy.
+This project aims to classify data points into target classes using the K-Nearest Neighbors (KNN) algorithm. The model predicts the class of a data point based on the similarity (distance) to its nearest neighbors. The project includes data preprocessing, model training, evaluation, and optimization of the K value.
 
 📂 Dataset
-The dataset contains the following features:
+The dataset used in this project is:
 
-Daily Time Spent on Site – Time spent on the website (minutes)
-Age – User age (years)
-Area Income – Average income of the user’s region
-Daily Internet Usage – Daily internet usage (minutes)
-Ad Topic Line – Advertisement headline
-City – User’s city
-Male – Gender indicator (1 = Male, 0 = Female)
-Country – User’s country
-Timestamp – Interaction time
-Clicked on Ad – Target variable (1 = Clicked, 0 = Not Clicked)
+KNN_Project_Data.csv
+
+It contains multiple numerical features along with:
+
+TARGET CLASS – Target variable (1 or 0)
 
 🔍 Exploratory Data Analysis (EDA)
-Data visualization was used to explore patterns and relationships:
+Data visualization was performed to understand patterns and relationships:
 
-Distribution of Age using histograms
-Relationship between Age and Area Income using joint plots
-Correlation between Daily Time Spent on Site and Daily Internet Usage
-Pair plots based on Clicked on Ad to compare user behavior
+Pair plots to visualize relationships between features
+Analysis of feature distribution
+Observing class separation based on TARGET CLASS
 
 ⚙️ Data Preparation
-Selected relevant numerical features:
+Performed feature scaling using StandardScaler because KNN is distance-based
 
-Age
-Area Income
-Daily Time Spent on Site
-Daily Internet Usage
+Selected all numerical features for training
 
 Split dataset into:
-Training set (67%)
-Testing set (33%)
+Training set (70%)
+Testing set (30%)
 
 🤖 Model
-Algorithm: Logistic Regression
+Algorithm: K-Nearest Neighbors (KNN)
 Library: Scikit-Learn
 
-Adjusted parameter:
-Increased max_iter to ensure model convergence
+Initial parameter:
+K = 1
+
+Then optimized K value by testing values from 1 to 40
 
 📈 Performance
-The model achieved strong results:
+Model performance improved after tuning:
 
-Accuracy: 97%
-Precision: 0.98
-Recall: 0.96
-F1-Score: 0.97
+K = 1 → Accuracy ≈ 72%
+K = 30 → Accuracy ≈ 83%
 
 🛠️ Technologies Used
 Python
@@ -61,4 +52,4 @@ Seaborn
 Scikit-Learn
 
 ✅ Conclusion
-The Logistic Regression model achieved high accuracy in predicting ad clicks. The selected features effectively captured user behavior, resulting in strong and balanced performance metrics.
+The KNN model showed better performance after selecting the optimal K value. Feature scaling played a critical role in improving accuracy. Choosing the right K helps balance between overfitting and generalization.
